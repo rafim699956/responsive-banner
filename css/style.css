@@ -1,0 +1,256 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+a {
+    display: inline-block;
+    text-decoration: none;
+}
+
+img {
+    width: 100%;
+    max-width: 100%;
+}
+
+body {
+    background: #1E293B;
+}
+
+.wraper {
+    max-width: 1024px;
+    width: 100%;
+    margin: 100px auto;
+    padding: 20px;
+}
+
+.container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 50px;
+    width: 100%;
+}
+
+.left_item {
+    margin-top: 50px;
+}
+
+.title p {
+    color: rgb(148, 163, 184);
+    line-height: 1rem;
+    font-weight: 500;
+    font-size: .875rem;
+}
+
+.title h1 {
+    color: rgb(255, 255, 255);
+    font-size: 1.5rem;
+    line-height: 2rem;
+    font-weight: 600;
+    margin-top: .25rem;
+}
+
+.item_details {
+    display: flex;
+    align-items: center;
+    margin-top: 10px;
+}
+
+.item_details .stroke_color {
+    color: rgb(129, 140, 248);
+    stroke: #6366f1;
+    margin-right: .25rem;
+}
+
+.item_details p {
+    color: rgb(129, 140, 248);
+    font-weight: 500;
+    font-size: .75rem;
+    line-height: 1rem;
+}
+
+.item_details p span,
+.item_details .color {
+    color: rgb(148, 163, 184);
+}
+
+.item_details .dot {
+    color: rgb(203, 213, 225);
+    margin: 0 5px 0 10px;
+}
+
+.item_details .margin_left {
+    margin-left: .25rem;
+}
+
+.title .btn {
+    margin-top: 1.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.title .btn button {
+    color: rgb(255, 255, 255);
+    line-height: 1.5rem;
+    font-weight: 600;
+    font-size: .875rem;
+    padding: .5rem .75rem;
+    background: rgb(79, 70, 229);
+    border-radius: .5rem;
+    cursor: pointer;
+    outline: none;
+    border: none;
+}
+
+.left_item .sumary p {
+    color: rgb(148, 163, 184);
+    line-height: 1.5rem;
+    font-size: .875rem;
+}
+
+.right_item {
+    display: grid;
+    gap: 30px;
+    grid-template-columns: repeat(12, 1fr);
+}
+
+.right_item .img_big {
+    grid-column: 1/-1;
+}
+
+.right_item .img_small1 {
+    grid-column: 1/7;
+}
+
+.right_item .img_small2 {
+    grid-column: 7/-1;
+}
+
+.right_item .img_big img {
+    height: 13rem;
+    border-radius: .5rem;
+    object-fit: cover;
+}
+
+.right_item .img_small1 img,
+.right_item .img_small2 img {
+    height: 8rem;
+    border-radius: .5rem;
+    object-fit: cover;
+}
+
+@media only screen and (max-width:950px) {
+    .left_item {
+        grid-row: 2/3;
+        grid-column: 1/-1;
+        margin-top: -25px;
+    }
+
+    .right_item {
+        grid-column: 1/ -1;
+    }
+
+    .right_item .img_big {
+        grid-column: 1/span 6;
+    }
+
+    .right_item .img_small1 {
+        grid-column: 7/10;
+    }
+
+    .right_item .img_small2 {
+        grid-column: 10/-1;
+    }
+
+    .right_item .img_small1 img,
+    .right_item .img_small2 img {
+        height: 13rem;
+    }
+
+    .title {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .title p {
+        grid-column: 1/2;
+    }
+
+    .title h1 {
+        grid-row: 2/3;
+    }
+
+    .title .item_details {
+        grid-row: 3/4;
+        margin-top: -30px;
+    }
+
+    .title .btn {
+        grid-column: 3/-1;
+        grid-row: 2/4;
+    }
+}
+
+@media only screen and (max-width:848px) {
+    .right_item .img_big {
+        display: none;
+    }
+
+    .right_item .img_small1 {
+        grid-column: 1/span 6;
+    }
+
+    .right_item .img_small2 {
+        grid-column: 7/-1;
+    }
+
+    .title h1 {
+        font-size: 18px;
+    }
+}
+
+@media only screen and (max-width:683px) {
+    .left_item {
+        z-index: 9;
+        margin-top: -110px;
+    }
+
+    .right_item .img_big {
+        display: block;
+        grid-column: 1/-1;
+    }
+
+    .right_item .img_small1 {
+        display: none;
+    }
+
+    .right_item .img_small2 {
+        display: none;
+    }
+
+    .title p {
+        grid-column: 1/-1;
+        grid-row: 1/2;
+        color: rgb(255, 255, 255);
+        font-weight: 600;
+        padding-left: 10px;
+    }
+
+    .title h1 {
+        grid-column: 1/-1;
+        grid-row: 2/3;
+        margin-bottom: 50px;
+        padding-left: 10px;
+    }
+
+    .title .item_details {
+        grid-row: 3/4;
+        grid-column: 1/-1;
+    }
+
+    .title .btn {
+        grid-column: 1/-1;
+        grid-row: 4/5;
+    }
+}
